@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/app.css">
+    <script src="lib/underscore-min.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="scripts/google-spreadsheet.js"></script>
+    <script src="scripts/sortable-table.js"></script>
+    <script src="scripts/app.js"></script>
+</head>
+<body ng-app="app">
+
+<div class="panel">
+
+    <div ng-controller="MainCtrl" class="content">
+
+        <div class="header">
+            <div class="logo">
+                <span>DATA</span><span class="grid">GRID</span>
+            </div>
+
+            <div class="toolbar">
+                <ul class="links">
+                    <li>FAQ</li>
+                    <li class="last">Help</li>
+                </ul>
+
+                <form class="searchbox">
+                    <img class="search-icon" src="img/search.png">
+                    <input type="text" placeholder="Search">
+                </form>
+            </div>
+
+        </div>
+
+        <ul class="menu">
+            <li><a>Home</a></li>
+            <li><a class="selected">Preview</a></li>
+            <li><a>Activity</a></li>
+            <li><a>Control</a></li>
+            <li><a>Issue</a></li>
+            <li><a>Overview</a></li>
+        </ul>
+
+        <sortable-table data="table"></sortable-table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

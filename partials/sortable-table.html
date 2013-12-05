@@ -1,0 +1,38 @@
+<table class="data-table">
+
+    <tr>
+
+        <!-- Be ready for Angular super powers 8) -->
+
+        <th ng-repeat="title in table.headers"
+            ng-class="{
+                'numeric': title.numeric != 'false',
+                'sorted': sortedBy == $index
+            }"
+            ng-click="sortByColumn($index)"
+        >
+            {{ title.text }}
+
+            <span ng-class="{
+                'sorted-up': sortedBy == $index && sortDirection,
+                'sorted-down': sortedBy == $index && !sortDirection
+            }">
+            </span>
+        </th>
+
+    </tr>
+
+    <tr ng-repeat="row in table.rows" ng-class-even="'even-row'">
+
+        <td ng-repeat="cell in row"
+            ng-class="{
+                'numeric': cell.numeric != 'false',
+                'pos-percentage': cell.numeric == 'pos-percentage',
+                'neg-percentage': cell.numeric == 'neg-percentage'
+            }"
+        >
+            {{ cell.text }}
+        </td>
+    </tr>
+
+</table>
