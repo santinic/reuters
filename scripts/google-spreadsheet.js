@@ -71,7 +71,7 @@ angular.module('GoogleSpreadsheet', [])
         }
 
         /**
-         * Tries to extract a number from this text. Fuzzy!
+         * Tries to extract a number from this text.
          * @param text
          * @returns {Number}
          */
@@ -88,7 +88,8 @@ angular.module('GoogleSpreadsheet', [])
 
         /**
          * Returns "false" if the specified text is not a numeric type.
-         * Otherwise returns the type of numeric ("some", "pos", "neg").
+         * Otherwise returns the type of numeric
+         * ("false", "numeric", "pos-percentage", "neg-percentage").
          * @param text
          * @returns {string}
          */
